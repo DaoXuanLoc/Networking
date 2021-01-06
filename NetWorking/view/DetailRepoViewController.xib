@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailRepoViewController" customModule="NetWorking" customModuleProvider="target">
+            <connections>
+                <outlet property="repoWebView" destination="01F-1m-Wgt" id="yJr-zV-CaD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-wD-XFP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01F-1m-Wgt">
+                            <rect key="frame" x="16" y="8" width="382" height="802"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="01F-1m-Wgt" firstAttribute="leading" secondItem="Xbf-wD-XFP" secondAttribute="leading" constant="16" id="PbM-Yi-DF1"/>
+                        <constraint firstItem="01F-1m-Wgt" firstAttribute="top" secondItem="Xbf-wD-XFP" secondAttribute="top" constant="8" id="QN0-81-ecU"/>
+                        <constraint firstAttribute="trailing" secondItem="01F-1m-Wgt" secondAttribute="trailing" constant="16" id="Voa-hG-yVO"/>
+                        <constraint firstAttribute="bottom" secondItem="01F-1m-Wgt" secondAttribute="bottom" constant="8" id="kSP-H0-nAD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Xbf-wD-XFP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KTZ-yh-QNU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Xbf-wD-XFP" secondAttribute="bottom" id="LpV-05-eHs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xbf-wD-XFP" secondAttribute="trailing" id="W38-qg-GaQ"/>
+                <constraint firstItem="Xbf-wD-XFP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XZU-y9-8xb"/>
+            </constraints>
+            <point key="canvasLocation" x="122" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
