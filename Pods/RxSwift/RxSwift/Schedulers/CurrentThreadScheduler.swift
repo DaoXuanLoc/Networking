@@ -6,10 +6,17 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import class Foundation.NSObject
+import protocol Foundation.NSCopying
+import class Foundation.Thread
 import Dispatch
-import Foundation
 
 #if os(Linux)
+    import struct Foundation.pthread_key_t
+    import func Foundation.pthread_setspecific
+    import func Foundation.pthread_getspecific
+    import func Foundation.pthread_key_create
+    
     fileprivate enum CurrentThreadSchedulerQueueKey {
         fileprivate static let instance = "RxSwift.CurrentThreadScheduler.Queue"
     }
@@ -66,7 +73,7 @@ public class CurrentThreadScheduler : ImmediateSchedulerType {
     }
 
     /// Gets a value that indicates whether the caller must call a `schedule` method.
-    public static private(set) var isScheduleRequired: Bool {
+    public static fileprivate(set) var isScheduleRequired: Bool {
         get {
             return pthread_getspecific(CurrentThreadScheduler.isScheduleRequiredKey) == nil
         }

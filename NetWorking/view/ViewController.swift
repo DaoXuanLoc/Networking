@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     private func bindViewModel(){
         viewModel.data
             .drive(repoTableVIew.rx.items(cellIdentifier: "RepoTableViewCell")) { _, repository, cell in
+                print("bindViewModel = ", repository.repoName)
                 guard let repoCell = cell as? RepoTableViewCell else { return }
                 repoCell.configCell(repo: repository)
             }
