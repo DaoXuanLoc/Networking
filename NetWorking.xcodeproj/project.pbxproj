@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A416EE7225A54C9C00CC784B /* DetailRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416EE7025A54C9C00CC784B /* DetailRepoViewController.swift */; };
 		A416EE7325A54C9C00CC784B /* DetailRepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A416EE7125A54C9C00CC784B /* DetailRepoViewController.xib */; };
+		A416EE9F25A5CBB700CC784B /* RepoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416EE9E25A5CBB700CC784B /* RepoApi.swift */; };
 		A439A1CF25A41647005CA243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A1CE25A41647005CA243 /* AppDelegate.swift */; };
 		A439A1D125A41647005CA243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A1D025A41647005CA243 /* SceneDelegate.swift */; };
 		A439A1D325A41647005CA243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A1D225A41647005CA243 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		9FFF5983F7CDFCDE2C06EF1A /* Pods_NetWorkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetWorkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A416EE7025A54C9C00CC784B /* DetailRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepoViewController.swift; sourceTree = "<group>"; };
 		A416EE7125A54C9C00CC784B /* DetailRepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRepoViewController.xib; sourceTree = "<group>"; };
+		A416EE9E25A5CBB700CC784B /* RepoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoApi.swift; sourceTree = "<group>"; };
 		A439A1CB25A41647005CA243 /* NetWorking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetWorking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A439A1CE25A41647005CA243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A439A1D025A41647005CA243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 				A416EE7125A54C9C00CC784B /* DetailRepoViewController.xib */,
 			);
 			name = detail;
+			sourceTree = "<group>";
+		};
+		A416EE9D25A5CB9A00CC784B /* moya */ = {
+			isa = PBXGroup;
+			children = (
+				A416EE9E25A5CBB700CC784B /* RepoApi.swift */,
+			);
+			name = moya;
 			sourceTree = "<group>";
 		};
 		A439A1C225A41647005CA243 = {
@@ -197,6 +207,7 @@
 		A439A20325A416CC005CA243 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				A416EE9D25A5CB9A00CC784B /* moya */,
 				A439A20825A4179B005CA243 /* Repository.swift */,
 			);
 			name = model;
@@ -474,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A416EE9F25A5CBB700CC784B /* RepoApi.swift in Sources */,
 				A439A20E25A41852005CA243 /* RepoViewModel.swift in Sources */,
 				A439A1D325A41647005CA243 /* ViewController.swift in Sources */,
 				A439A1CF25A41647005CA243 /* AppDelegate.swift in Sources */,

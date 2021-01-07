@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             .bind(to: viewModel.searchText)
             .disposed(by: disposeBag)
         
-        viewModel.data.asDriver()
+        viewModel.data
             .map { "\($0.count) Repositories" }
             .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
@@ -57,5 +57,18 @@ class ViewController: UIViewController {
                 self.navigationController?.pushViewController(viewController, animated: true)
             }
             .disposed(by: disposeBag)
+        
+        viewModel.isLoadingValue
+            .drive(firstLoadDataLocalBinder)
+            .disposed(by: disposeBag)
+    }
+}
+
+extension ViewController {
+    var firstLoadDataLocalBinder: Binder<Bool> {
+        return Binder(self) { vc, test in
+            print("isLoading", test)
+            vc.viewLoading.isHidden = test
+        }
     }
 }

@@ -7,6 +7,7 @@ target 'NetWorking' do
   
   pod 'RxSwift', '6.0.0'
   pod 'RxCocoa', '6.0.0'
+  pod 'Moya'
   # Pods for NetWorking
   
   target 'NetWorkingTests' do
